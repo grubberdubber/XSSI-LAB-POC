@@ -1,0 +1,14 @@
+{
+  "name": "xssi-lab",
+  "version": "1.0.0",
+  "description": "Laboratorio educativo de XSSI",
+  "main": "server-vulnerable.js",
+  "scripts": {
+    "start": "node server-vulnerable.js",
+    "mitigated": "node server-mitigated.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+
